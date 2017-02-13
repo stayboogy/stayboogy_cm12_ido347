@@ -1,5 +1,5 @@
 # NFC
-vendor/firmware/BCM20795A2_001.003.025.0005.0035_Generic_I2C_NCD_Unsigned_configdata.ncd
+vendor/firmware/BCM20795A2_001.003.025.0005.0043_Generic_I2C_NCD_Unsigned_configdata.ncd
 
 # Signed Venus (media) firmware
 etc/firmware/venus.b00
