@@ -112,7 +112,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 				 ro.debuggable=1 
 
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    NotePad
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
