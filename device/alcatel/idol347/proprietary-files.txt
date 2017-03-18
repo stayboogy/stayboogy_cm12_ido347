@@ -29,3 +29,15 @@ etc/firmware/Signedrompatch_v20.bin
 etc/firmware/Signedrompatch_v21.bin
 etc/firmware/Signedrompatch_v24.bin
 etc/firmware/Signedrompatch_v30.bin
+
+app/TctCamera/TctCamera.apk
+app/TctCamera/lib/arm/libarcsoft_beauty_shot.so
+app/TctCamera/lib/arm/libarcsoft_picauto.so
+app/TctCamera/lib/arm/libjni_mosaic.so
+app/TctCamera/lib/arm/libmpbase.so
+app/TctCamera/lib/arm/libscenedetector.so
+app/TctCamera/lib/arm/libarcsoft_night_shot.so
+app/TctCamera/lib/arm/libbeautyface.so
+app/TctCamera/lib/arm/libjni_tinyplanet.so
+app/TctCamera/lib/arm/libnightshot.so
+app/TctCamera/lib/arm/libtctjpeg.so
