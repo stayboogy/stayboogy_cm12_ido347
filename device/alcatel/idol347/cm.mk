@@ -15,7 +15,7 @@
 $(call inherit-product, device/alcatel/idol347/full_idol347.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/stayboogy.mk)
 
 PRODUCT_NAME := cm_idol347
 BOARD_VENDOR := alcatel
