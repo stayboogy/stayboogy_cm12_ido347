@@ -27,9 +27,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qcom.zram.sh \
     init.recovery.qcom.rc \
-    init.tct.gpio_keys.sh \
     init.tct.variant.sh \
     ueventd.qcom.rc
 
@@ -167,10 +165,6 @@ PRODUCT_COPY_FILES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/msg.kl:system/usr/keylayout/msg.kl
-
-# Thermal
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal_engine.conf
 
 # Keystore
 PRODUCT_PACKAGES += \
