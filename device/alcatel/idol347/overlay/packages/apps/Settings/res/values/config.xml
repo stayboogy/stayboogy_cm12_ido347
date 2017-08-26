@@ -16,31 +16,9 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="additional_system_update" translatable="false"></string>
-    <string name="additional_system_update_menu" translatable="false"></string>
-
-    <!-- Carrier_enabled editable -->
-    <bool name="config_allow_edit_carrier_enabled" translatable="false">true</bool>
-
-    <!-- Processor menu, freq cap files -->
-    <string name="max_cpu_freq_file" translatable="false">/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq</string>
-    <string name="min_cpu_freq_file" translatable="false">/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq</string>
-
-    <!-- Display ro.product.name above Device model -->
-    <bool name="config_displayDeviceName">false</bool>
-
     <!-- The default value of whether to check "Show password" in the WiFi AP dialog -->
     <bool name="config_showWifiApPasswordDefault">true</bool>
-
-    <!-- This is used to determine whether to hide the
-         preferred application install location settings-->
+   
+    <!-- This is used to determine whether to hide the preferred application install location settings-->
     <bool name="config_hide_app_install_location" translatable="false">false</bool>
-
-    <!-- Metrics server endpoints -->
-    <string name="stats_cm_url">https://stats.cyanogenmod.org/submit</string>
-    <string name="stats_cyanogen_url">https://shopvac.cyngn.com/community/heartbeat</string>
-    <string name="stats_cyanogen_token_url">https://account.cyngn.com/api/v1/community/heartbeat_token</string>
-
-    <!-- Whether to disable allcaps default state of tabtext within datausage -->
-    <bool name="config_gcf_disable_default_tabtext_allcaps">false</bool>
 </resources>

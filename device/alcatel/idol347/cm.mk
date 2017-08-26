@@ -24,3 +24,11 @@ PRODUCT_DEVICE := idol347
 TARGET_VENDOR_PRODUCT_NAME := idol347
 TARGET_VENDOR_DEVICE_NAME := idol347
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=idol347 PRODUCT_NAME=idol347
+
+# Stayboogy Personal
+BUILD_VARIANT := stayboogy
+
+ifeq ($(BUILD_VARIANT),stayboogy)
+PRODUCT_COPY_FILES += \
+    device/alcatel/idol347/stayboogy/MetalGearSolid.mp3:system/media/audio/ringtones/MetalGearSolid.mp3
+endif

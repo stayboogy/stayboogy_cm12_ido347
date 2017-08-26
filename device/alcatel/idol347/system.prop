@@ -15,6 +15,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 persist.radio.rat_on=combine
 ril.subscription.types=NV,RUIM
+ro.telephony.default_network=9
 
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
@@ -59,7 +60,7 @@ debug.enable.sglscale=1
 ro.qualcomm.cabl=2
 
 telephony.lteOnCdmaDevice=1
-
+persist.radio.support_subaddr=0
 persist.fuse_sdcard=true
 
 persist.radio.support_subaddr=0
@@ -91,9 +92,7 @@ voice.voip.conc.disabled=true
 persist.debug.wfd.enable=1
 persist.hwc.enable_vds=1
 
-persist.sys.switchFlip.on=1
-
-persist.data_netmgrd_mtu=1410
+#persist.data_netmgrd_mtu=1410
 persist.radio.add_power_save=1
 persist.radio.rat_on=combine
 ro.audio.monitorRotation=true
@@ -119,5 +118,4 @@ dalvik.vm.dex2oat-flags=--no-watch-dog
 # perf
 ro.core_ctl_min_cpu=2
 ro.core_ctl_max_cpu=4
-ro.min_freq_0=800000
 ro.vendor.extension_library=libqti-perfd-client.so

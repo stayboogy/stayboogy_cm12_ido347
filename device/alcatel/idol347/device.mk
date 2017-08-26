@@ -21,15 +21,28 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.bt.sh \
-    init.qcom.post_boot.sh \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
-    init.tct.variant.sh \
     ueventd.qcom.rc
+
+# Variant config script
+PRODUCT_PACKAGES += \
+    init.tct.variant.sh
+
+# Bluetooth config
+PRODUCT_PACKAGES += \
+    init.qcom.bt.sh
+
+# Cpu config
+PRODUCT_PACKAGES += \
+    init.qcom.post_boot.sh
+
+# IRQ balance
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -66,7 +79,7 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-$(call inherit-product, frameworks/native/build/phone-hdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Audio
@@ -109,8 +122,12 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 				 ro.adb.secure=0 \
 				 ro.debuggable=1 
 
+# Open source charger images
 PRODUCT_PACKAGES += \
-    charger_res_images \
+    charger_res_images
+
+# Notepad
+PRODUCT_PACKAGES += \
     NotePad
 
 # Connectivity Engine support
@@ -165,6 +182,10 @@ PRODUCT_COPY_FILES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/msg.kl:system/usr/keylayout/msg.kl
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal_engine.conf:system/etc/thermal_engine.conf
 
 # Keystore
 PRODUCT_PACKAGES += \

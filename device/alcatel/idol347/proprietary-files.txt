@@ -41,3 +41,4 @@ app/TctCamera/lib/arm/libbeautyface.so
 app/TctCamera/lib/arm/libjni_tinyplanet.so
 app/TctCamera/lib/arm/libnightshot.so
 app/TctCamera/lib/arm/libtctjpeg.so
+

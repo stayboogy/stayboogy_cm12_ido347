@@ -16,7 +16,6 @@
 USE_HOST_LEX=yes
 DEVICE_PATH := device/alcatel/idol347
 
-
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Platform
@@ -41,8 +40,7 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 80000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 109f10eed3f021e3 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 00000100
@@ -51,7 +49,7 @@ BOARD_RAMDISK_OFFSET     := 01000000
 TARGET_KERNEL_SOURCE := kernel/alcatel/msm8916
 TARGET_KERNEL_CONFIG := cyanogenmod_idol347-perf_defconfig
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/alcatel/idol347/bluetooth
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -110,7 +108,7 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 EXTENDED_FONT_FOOTPRINT := true
 
 # GPS
-TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
+TARGET_GPS_HAL_PATH := device/alcatel/idol347/gps
 TARGET_NO_RPC := true
 
 # Init
@@ -139,7 +137,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12767573000
 TARGET_POWERHAL_VARIANT := qcom
 
 # CMHW
-BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/cmhw
+BOARD_HARDWARE_CLASS := device/alcatel/idol347/cmhw
+BOARD_USES_CYANOGEN_HARDWARE := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
@@ -173,6 +172,19 @@ TARGET_HAVE_SIGNED_VENUS_FW := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/alcatel/idol347/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth_loader.te \
+    file.te \
+    file_contexts \
+    healthd.te \
+    init_shell.te \
+    mediaserver.te \
+    property_contexts \
+    rmt_storage.te \
+    system_server.te \
+    wcnss_service.te
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
